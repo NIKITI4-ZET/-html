@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>КУБИКИ С ТОСКАМИ</title>
+    <style>
+        button{
+            height: 200px; width: 200px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <p id=score></p>
+<img width="200"  height="200"  id="1" src="1.png"><img>
+<img width="200"  height="200"  id="2" src="2.png"><img>
+<img width="200"  height="200"  id="3" src="3.png"><img>
+<img width="200"  height="200"  id="4" src="4.png"><img>
+<img width="200"  height="200"  id="5" src="5.png"><img>
+<img width="200"  height="200"  id="6" src="6.png"><img><br>
+    <button onclick="start()">PLAY</button>
+<script>
+    i1=0
+    i2=0
+    i3=0
+    i4=0
+    i5=0
+    i6=0
+    score=100
+    function start() {
+        i1=Math.floor(Math.random()*3)+1
+        i2=Math.floor(Math.random()*3)+1
+        i3=Math.floor(Math.random()*3)+1
+        i4=Math.floor(Math.random()*3)+1
+        i5=Math.floor(Math.random()*3)+1
+        i6=Math.floor(Math.random()*3)+1
+
+        draw(1,i1)
+        draw(2,i2)
+        draw(3,i3)
+        draw(4,i4)
+        draw(5,i5)
+        draw(6,i6)
+
+
+    }
+
+    function draw(arg1,arg2) {
+        document.getElementById(arg1).src=arg2+".png"
+    }
+
+
+</script>
+    </center>
+
+</body>
+</html>
